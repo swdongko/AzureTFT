@@ -18,6 +18,10 @@ resource "azurerm_app_service" "test" {
     type  = "SQLServer"
     value = "Server=some-server.mydomain.com;Integrated Security=SSPI"
   }
+  auth_settings {
+    enabled = true
+  }
+  https_only = true
 }
 
 
